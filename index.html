@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Jhia 💛</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       SECTION 1: OPENING INTRO SCREEN
+       Full-screen dark cinematic intro with text
+  ============================================= -->
+  <section id="intro-screen">
+    <!-- Floating golden particle canvas -->
+    <canvas id="intro-particles"></canvas>
+
+    <div id="intro-text-container">
+      <p class="intro-line" id="intro-line-1">Hey Jhia...</p>
+      <p class="intro-line" id="intro-line-2">Today is your day 💛</p>
+      <p class="intro-line" id="intro-line-3">So I made something special for you...</p>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 2 & 3 & 4: MAIN CELEBRATION PAGE
+       Cake, heading, message, interactions
+  ============================================= -->
+  <section id="main-celebration" class="hidden">
+    <!-- Background canvas for floating particles/sparkles -->
+    <canvas id="celebration-particles"></canvas>
+
+    <!-- Floating balloons decoration -->
+    <div id="balloons-container">
+      <div class="balloon" style="--color:#FFB3BA;--left:5%;--delay:0s;--duration:8s;"></div>
+      <div class="balloon" style="--color:#FFDCA8;--left:15%;--delay:1s;--duration:10s;"></div>
+      <div class="balloon" style="--color:#FFF3B0;--left:80%;--delay:0.5s;--duration:9s;"></div>
+      <div class="balloon" style="--color:#C9E4CA;--left:90%;--delay:2s;--duration:11s;"></div>
+      <div class="balloon" style="--color:#FFB3BA;--left:70%;--delay:1.5s;--duration:7s;"></div>
+      <div class="balloon" style="--color:#D4BFFF;--left:40%;--delay:3s;--duration:12s;"></div>
+    </div>
+
+    <!-- Birthday heading -->
+    <div id="birthday-heading">
+      <h1 id="main-title">Happy Birthday, Jhia! 🎉</h1>
+      <p id="main-subtitle">Wishing you happiness, laughter, success, and the most beautiful year ahead 💛</p>
+    </div>
+
+    <!-- =============================================
+         REALISTIC BIRTHDAY CAKE
+         HTML/CSS built cake with candles
+    ============================================= -->
+    <div id="cake-wrapper">
+      <!-- Glow ring behind cake -->
+      <div id="cake-glow"></div>
+
+      <!-- The full cake structure -->
+      <div id="cake">
+
+        <!-- Candles row on top -->
+        <div id="candles-row">
+          <!-- 5 candles, each with a flame and smoke -->
+          <div class="candle-holder">
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="candle-flame-wrap">
+                <div class="flame-outer"></div>
+                <div class="flame-inner"></div>
+              </div>
+              <div class="candle-smoke hidden"></div>
+            </div>
+          </div>
+          <div class="candle-holder">
+            <div class="candle">
+              <div class="candle-body" style="--candle-color:#FFB3BA;"></div>
+              <div class="candle-flame-wrap">
+                <div class="flame-outer"></div>
+                <div class="flame-inner"></div>
+              </div>
+              <div class="candle-smoke hidden"></div>
+            </div>
+          </div>
+          <div class="candle-holder">
+            <div class="candle">
+              <div class="candle-body" style="--candle-color:#FFDCA8;"></div>
+              <div class="candle-flame-wrap">
+                <div class="flame-outer"></div>
+                <div class="flame-inner"></div>
+              </div>
+              <div class="candle-smoke hidden"></div>
+            </div>
+          </div>
+          <div class="candle-holder">
+            <div class="candle">
+              <div class="candle-body" style="--candle-color:#D4BFFF;"></div>
+              <div class="candle-flame-wrap">
+                <div class="flame-outer"></div>
+                <div class="flame-inner"></div>
+              </div>
+              <div class="candle-smoke hidden"></div>
+            </div>
+          </div>
+          <div class="candle-holder">
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="candle-flame-wrap">
+                <div class="flame-outer"></div>
+                <div class="flame-inner"></div>
+              </div>
+              <div class="candle-smoke hidden"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top cake layer with cream swirls -->
+        <div id="cake-top-layer">
+          <!-- Dripping icing along the top edge -->
+          <div class="icing-drip-row">
+            <div class="drip" style="left:8%; height:18px;"></div>
+            <div class="drip" style="left:18%; height:24px;"></div>
+            <div class="drip" style="left:28%; height:15px;"></div>
+            <div class="drip" style="left:38%; height:20px;"></div>
+            <div class="drip" style="left:48%; height:28px;"></div>
+            <div class="drip" style="left:58%; height:16px;"></div>
+            <div class="drip" style="left:68%; height:22px;"></div>
+            <div class="drip" style="left:78%; height:19px;"></div>
+            <div class="drip" style="left:88%; height:25px;"></div>
+          </div>
+          <!-- Cream swirls on top -->
+          <div class="swirl-row">
+            <div class="swirl"></div>
+            <div class="swirl"></div>
+            <div class="swirl"></div>
+            <div class="swirl"></div>
+            <div class="swirl"></div>
+          </div>
+          <!-- Sprinkles on top -->
+          <div class="sprinkles-layer" id="top-sprinkles"></div>
+        </div>
+
+        <!-- Frosting layer between top and middle -->
+        <div class="frosting-band"></div>
+
+        <!-- Middle cake layer -->
+        <div id="cake-middle-layer">
+          <!-- Side decoration dots -->
+          <div class="side-decorations" id="mid-decorations"></div>
+          <!-- Visible sponge texture -->
+          <div class="layer-label">🍓 Strawberry Sponge</div>
+        </div>
+
+        <!-- Frosting band between middle and bottom -->
+        <div class="frosting-band"></div>
+
+        <!-- Bottom cake layer -->
+        <div id="cake-bottom-layer">
+          <div class="side-decorations" id="bot-decorations"></div>
+          <div class="layer-label">🍫 Chocolate Sponge</div>
+          <!-- Bottom edge piping -->
+          <div class="bottom-piping"></div>
+        </div>
+
+        <!-- Cake plate / stand -->
+        <div id="cake-plate">
+          <div id="cake-stand-top"></div>
+          <div id="cake-stand-stem"></div>
+          <div id="cake-stand-base"></div>
+        </div>
+      </div>
+
+      <!-- Knife for cake cutting animation (hidden initially) -->
+      <div id="cake-knife" class="hidden">
+        <div id="knife-handle"></div>
+        <div id="knife-blade"></div>
+      </div>
+    </div><!-- end cake-wrapper -->
+
+    <!-- =============================================
+         SECTION 5: BLOW CANDLES BUTTON
+    ============================================= -->
+    <div id="candle-blow-section">
+      <button id="blow-btn" class="main-btn">Blow the candles 🎂</button>
+      <p id="wish-message" class="hidden">Make a wish, Jhia ✨</p>
+    </div>
+
+    <!-- =============================================
+         SECTION 6: CAKE CUTTING BUTTON
+         Revealed after blowing candles
+    ============================================= -->
+    <div id="cake-cut-section" class="hidden">
+      <button id="cut-btn" class="main-btn">Cut the cake 🍰</button>
+      <p id="cake-time-message" class="hidden">Cake time! This day is all yours 🎈</p>
+    </div>
+
+  </section><!-- end main-celebration -->
+
+
+  <!-- =============================================
+       SECTION 7: MEMORY MESSAGE CARD
+  ============================================= -->
+  <section id="memory-section" class="hidden">
+    <div id="memory-card">
+      <div class="memory-stars">✨ ✨ ✨</div>
+      <p id="memory-text">
+        Thank you for being such an important part of my life.<br/>
+        For all the memories, all the laughs, all the little moments...<br/><br/>
+        I'm really lucky to have you as my sister.<br/>
+        You make life brighter just by being in it 💛
+      </p>
+      <div class="memory-stars">💛 💛 💛</div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 8: SURPRISE BUTTONS / CARDS
+  ============================================= -->
+  <section id="surprises-section" class="hidden">
+    <h2 id="surprises-heading">More surprises for Jhia 🎁</h2>
+
+    <div id="surprises-grid">
+
+      <!-- A. Open a gift -->
+      <div class="surprise-card" id="gift-card">
+        <div class="gift-box-visual" id="gift-box">
+          <div class="gift-lid" id="gift-lid">
+            <div class="gift-ribbon-top"></div>
+          </div>
+          <div class="gift-body">
+            <div class="gift-ribbon-v"></div>
+          </div>
+        </div>
+        <p class="surprise-reveal hidden" id="gift-reveal">You deserve all the happiness in the world 💛</p>
+        <button class="surprise-btn" id="gift-btn">Open a gift 🎁</button>
+      </div>
+
+      <!-- B. A special note -->
+      <div class="surprise-card" id="note-card">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap" id="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="envelope-lines">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <p class="surprise-reveal hidden" id="note-reveal">
+          "Every moment with you is a memory I treasure. You are not just my sister — you are my favorite person. Happy Birthday, Jhia 💌"
+        </p>
+        <button class="surprise-btn" id="note-btn">A special note 💌</button>
+      </div>
+
+      <!-- C. Birthday sparkle -->
+      <div class="surprise-card" id="sparkle-card">
+        <div class="sparkle-visual" id="sparkle-visual">✨</div>
+        <p class="surprise-reveal hidden" id="sparkle-reveal">The world shines brighter with you in it! ✨</p>
+        <button class="surprise-btn" id="sparkle-btn">Birthday sparkle ✨</button>
+      </div>
+
+      <!-- D. One more surprise -->
+      <div class="surprise-card" id="final-surprise-card">
+        <div class="question-mark-visual">💛</div>
+        <p class="surprise-reveal hidden" id="final-surprise-reveal">You are truly special, Jhia 💛</p>
+        <button class="surprise-btn" id="final-surprise-btn">One more surprise 👀</button>
+      </div>
+
+    </div><!-- end surprises-grid -->
+  </section>
+
+  <!-- =============================================
+       PHOTO PLACEHOLDER SECTION
+       (User can add sister photos later)
+  ============================================= -->
+  <section id="photos-section" class="hidden">
+    <h2>Memories 📸</h2>
+    <p class="photos-subtitle">[ Add your favorite photos here ]</p>
+    <div id="photos-grid">
+      <div class="photo-placeholder">
+        <span>📷 Add a photo</span>
+      </div>
+      <div class="photo-placeholder">
+        <span>📷 Add a photo</span>
+      </div>
+      <div class="photo-placeholder">
+        <span>📷 Add a photo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 10: FINAL CELEBRATION SECTION
+  ============================================= -->
+  <section id="final-section" class="hidden">
+    <canvas id="final-particles"></canvas>
+
+    <div id="final-content">
+      <h1 id="final-title">Happy Birthday Jhia 💛</h1>
+      <p id="final-subtitle">May your life be full of joy, success, peace, and beautiful memories.</p>
+      <blockquote id="final-quote">
+        "Some bonds are gifts for life. A sister is one of them."
+      </blockquote>
+      <button id="restart-btn" class="main-btn glow-btn">Watch again 🔁</button>
+    </div>
+  </section>
+
+  <!-- =============================================
+       GLOBAL OVERLAY CANVAS for confetti & sparkles
+  ============================================= -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Sparkle-on-click cursor overlay -->
+  <canvas id="cursor-sparkle-canvas"></canvas>
+
+  <!-- Mute/Unmute Button (optional music) -->
+  <button id="mute-btn" title="Toggle music">🔇</button>
+
+  <!-- Background music (silent placeholder — user can replace src) -->
+  <audio id="bg-music" loop>
+    <!-- Replace with your actual music file path -->
+    <!-- <source src="music/birthday.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
