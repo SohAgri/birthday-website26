@@ -52,22 +52,6 @@ body {
   background: var(--cream);
   color: var(--text-dark);
   overflow-x: hidden;
-  cursor: none; /* custom sparkle cursor active */
-}
-
-/* Custom cursor dot */
-body::after {
-  content: '';
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, var(--gold-glow), transparent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  top: var(--cursor-y, -100px);
-  left: var(--cursor-x, -100px);
 }
 
 /* ---- UTILITY ---- */

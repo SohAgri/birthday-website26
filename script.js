@@ -33,11 +33,7 @@ function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
   resize();
   window.addEventListener('resize', resize);
 
-  // Also update CSS cursor dot position
   document.addEventListener('mousemove', function(e) {
-    document.body.style.setProperty('--cursor-x', e.clientX + 'px');
-    document.body.style.setProperty('--cursor-y', e.clientY + 'px');
-
     // Spawn a tiny sparkle particle on move
     for (let i = 0; i < 2; i++) {
       sparks.push({
